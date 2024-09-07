@@ -11,5 +11,5 @@ function die()
 	// Change graphic to dead graphic.
 	// Play any necessary death sounds.
 	// Play any particle effects that need added to the death graphic.
-	x = -100
+	x = 100
 }

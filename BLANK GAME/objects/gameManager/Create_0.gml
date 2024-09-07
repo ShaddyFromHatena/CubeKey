@@ -8,6 +8,8 @@ difficulty_timer = 0;
 spawn_delay = 120;
 spawn_timer = 0;
 
+score = 0;
+
 function lose()
 {
 	// Show a game-over graphic.
@@ -15,6 +17,11 @@ function lose()
 	// Do any necessary music changes.
 	// Stop new note spawns.
 	// Cause all notes to fall off the chart or something-?
+}
+
+function gain_score(_added_score)
+{
+	score += _added_score
 }
 
 // List of Patterns:
