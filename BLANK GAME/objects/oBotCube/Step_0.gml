@@ -19,9 +19,9 @@ if (_key_jump && (place_meeting(x,y+sign(grv),partner_cube) || place_meeting(x,y
 	jump_timer = 0;
 }
 
-if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote)))
+if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote) || place_meeting(x,y+vsp,oVerticalBlockades)))
 {
-	while (!(place_meeting(x,y+sign(vsp),partner_cube) || place_meeting(x,y+sign(vsp),oKeyboardNote)))
+	while (!(place_meeting(x,y+sign(vsp),partner_cube) || place_meeting(x,y+sign(vsp),oKeyboardNote) || place_meeting(x,y+vsp,oVerticalBlockades)))
 	{
 		y = y + sign(vsp);
 	}
