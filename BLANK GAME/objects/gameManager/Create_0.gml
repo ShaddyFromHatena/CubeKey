@@ -8,11 +8,24 @@ difficulty_timer = 0;
 spawn_delay = 120;
 spawn_timer = 0;
 
+lost = false;
+
 score = 0;
 
 function lose()
 {
-	// Show a game-over graphic.
+	if not lost
+	{
+		lost = true;
+		with(instance_find(oGameOver,0))
+		{
+			y -= 700
+		}
+		with(instance_find(oButtonAgain,0))
+		{
+			y -= 700
+		}
+	}
 	// Allow input for resetting the game state.
 	// Do any necessary music changes.
 	// Stop new note spawns.
