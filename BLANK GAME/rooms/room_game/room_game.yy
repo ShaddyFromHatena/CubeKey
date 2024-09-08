@@ -1,15 +1,17 @@
 {
   "$GMRoom":"v1",
-  "%Name":"Room1",
+  "%Name":"room_game",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_288C29AE","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_9682F21","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_4BEDAC5","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_42F809C2","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_288C29AE","path":"rooms/room_game/room_game.yy",},
+    {"name":"inst_9682F21","path":"rooms/room_game/room_game.yy",},
+    {"name":"inst_4BEDAC5","path":"rooms/room_game/room_game.yy",},
+    {"name":"inst_42F809C2","path":"rooms/room_game/room_game.yy",},
+    {"name":"inst_1F94DFE0","path":"rooms/room_game/room_game.yy",},
+    {"name":"inst_593D1072","path":"rooms/room_game/room_game.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -17,6 +19,8 @@
         {"$GMRInstance":"v1","%Name":"inst_288C29AE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_288C29AE","objectId":{"name":"oBotCube","path":"objects/oBotCube/oBotCube.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":160.0,"y":320.0,},
         {"$GMRInstance":"v1","%Name":"inst_9682F21","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9682F21","objectId":{"name":"oTopCube","path":"objects/oTopCube/oTopCube.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":160.0,"y":416.0,},
         {"$GMRInstance":"v1","%Name":"inst_42F809C2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_42F809C2","objectId":{"name":"oTrumpetSkeleton","path":"objects/oTrumpetSkeleton/oTrumpetSkeleton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.5,"scaleY":1.5,"x":1472.0,"y":192.0,},
+        {"$GMRInstance":"v1","%Name":"inst_1F94DFE0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F94DFE0","objectId":{"name":"oGameOver","path":"objects/oGameOver/oGameOver.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.0,"scaleY":4.0,"x":688.0,"y":1008.0,},
+        {"$GMRInstance":"v1","%Name":"inst_593D1072","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_593D1072","objectId":{"name":"oButtonRetry","path":"objects/oButtonRetry/oButtonRetry.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.5,"scaleY":2.0,"x":704.0,"y":1280.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"TrumpetDoots","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"TrumpetDoots","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"KeyboardNotes","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
@@ -24,7 +28,7 @@
       ],"layers":[],"name":"KeyboardNotes","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
-  "name":"Room1",
+  "name":"room_game",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

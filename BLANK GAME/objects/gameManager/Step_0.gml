@@ -31,11 +31,12 @@ powerup_timer -= 1;
 // Check if the timer has reached zero
 if (powerup_timer <= 0) {
     // Reset the timer
-    powerup_timer = random_range(min_powerup_timer,max_powerup_timer)
+    powerup_timer = irandom_range(min_powerup_timer,max_powerup_timer);
 
     // Choose a random object to spawn
     var _obj_to_spawn;
-    switch (irandom(2)) {
+    switch (irandom(2)) 
+	{
         case 0:
             _obj_to_spawn = oPowerupMagnet;
             break;
@@ -48,5 +49,5 @@ if (powerup_timer <= 0) {
     }
 
     // Spawn the chosen object at a random position
-    instance_create_layer(spawn_x, random_range(spawn_y_min, spawn_y_max), "Instances", obj_to_spawn);
+    instance_create_layer(spawn_x, random_range(spawn_y_min, spawn_y_max), "Instances", _obj_to_spawn);
 }
