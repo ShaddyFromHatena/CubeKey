@@ -31,7 +31,6 @@ if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote)
 y += vsp;
 
 if powerup = "shield" {
-	instance_create_layer(x, y, "Instances", oBotShield_aura);
 	instance_create_layer(x, y, "Instances", oTopShield_aura);
 	powerup = ""
 	}

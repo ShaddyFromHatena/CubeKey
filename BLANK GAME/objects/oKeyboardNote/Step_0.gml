@@ -23,8 +23,3 @@ if (place_meeting(x,y,oTopCube))
 		lose()
 	}
 }
-
-if destroy == 1 {
-	destroy = 0;
-	instance_destroy()
-}

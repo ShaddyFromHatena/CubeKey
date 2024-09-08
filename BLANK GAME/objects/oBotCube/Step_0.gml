@@ -32,7 +32,6 @@ y += vsp;
 
 if powerup = "shield" {
 	instance_create_layer(x, y, "Instances", oBotShield_aura);
-	instance_create_layer(x, y, "Instances", oTopShield_aura);
 	powerup = ""
 	}
 
