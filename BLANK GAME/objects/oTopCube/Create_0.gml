@@ -8,9 +8,9 @@ jump_timer = 0;
 powerup = ""
 image_speed = 0
 bullets_fired = 0;
-gun = false
+gun = false;
 
-Timer = room_speed*5
+timer = 0;
 
 function die()
 {

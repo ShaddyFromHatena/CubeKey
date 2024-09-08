@@ -8,14 +8,14 @@ jump_timer = 0;
 powerup = ""
 bullets_fired = 0
 image_speed = 0;
-gun = false
+gun = false;
 
-Timer = room_speed*5
+timer = 0;
 
 function die()
 {
 	// Change graphic to dead graphic.
 	// Play any necessary death sounds.
 	// Play any particle effects that need added to the death graphic.
-	x = 100
+	x = -100
 }

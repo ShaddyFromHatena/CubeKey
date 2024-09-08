@@ -31,19 +31,19 @@ powerup_timer -= 1;
 // Check if the timer has reached zero
 if (powerup_timer <= 0) {
     // Reset the timer
-    powerup_timer = room_speed * 30
+    powerup_timer = random_range(min_powerup_timer,max_powerup_timer)
 
     // Choose a random object to spawn
-    var obj_to_spawn;
+    var _obj_to_spawn;
     switch (irandom(2)) {
         case 0:
-            obj_to_spawn = oPowerupMagnet;
+            _obj_to_spawn = oPowerupMagnet;
             break;
         case 1:
-            obj_to_spawn = oPowerupGun;
+            _obj_to_spawn = oPowerupGun;
             break;
         case 2:
-            obj_to_spawn = oPowerupShield;
+            _obj_to_spawn = oPowerupShield;
             break;
     }
 
