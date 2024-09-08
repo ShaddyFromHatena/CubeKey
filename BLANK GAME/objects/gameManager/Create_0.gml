@@ -18,6 +18,8 @@ powerup_timer = random_range(min_powerup_timer,max_powerup_timer);
 lost = false;
 score = 0;
 
+audio_stop_all();
+
 function lose()
 {
 	if not lost
