@@ -57,6 +57,7 @@
     {"id":{"name":"oVerticalBlockades","path":"objects/oVerticalBlockades/oVerticalBlockades.yy",},},
     {"id":{"name":"room_game","path":"rooms/room_game/room_game.yy",},},
     {"id":{"name":"room_main_menu","path":"rooms/room_main_menu/room_main_menu.yy",},},
+    {"id":{"name":"notes_1","path":"sounds/notes_1/notes_1.yy",},},
     {"id":{"name":"testSound1","path":"sounds/testSound1/testSound1.yy",},},
     {"id":{"name":"testSound2","path":"sounds/testSound2/testSound2.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},

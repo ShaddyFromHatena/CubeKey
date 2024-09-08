@@ -15,7 +15,7 @@ if (spawn_timer > spawn_delay)
 	{
 		var _new_x = _notes[i].x
 		var _new_y = _notes[i].y
-		instance_create_layer(spawn_x + _new_x, _new_y, "KeyboardNotes",oKeyboardNote)
+		instance_create_layer(spawn_x + _new_x*spawn_x_mult, spawn_y + _new_y*spawn_y_mult, "KeyboardNotes",oKeyboardNote)
 	}
 	
 	

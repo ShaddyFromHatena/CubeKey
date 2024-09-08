@@ -1,6 +1,9 @@
 spawn_x = 1400;
+spawn_y = 4;
 spawn_y_min = 0;
 spawn_y_max = 770;
+spawn_y_mult = 63;
+spawn_x_mult = 120;
 
 difficulty = 0;
 difficulty_delay = 720;
@@ -44,18 +47,11 @@ function gain_score(_added_score)
 patterns = 
 [
 	{
-		notes : [{x:0,y:100}], // Array of notes to spawn in {x,y} format.
-		audio : testSound1, // Audio file to be played (Might need to delay depending).
-		delay : 64, // Delay in frames until next pattern can spawn.
+		notes : [{x:0,y:8},{x:2,y:4},{x:4,y:6},{x:8,y:8},{x:10,y:6},{x:12,y:9},{x:14,y:8},{x:16,y:3},{x:18,y:4},{x:20,y:6},{x:22,y:8},{x:24,y:1},{x:26,y:3},{x:28,y:4},{x:30,y:6},{x:32,y:8},{x:34,y:4},{x:36,y:3},{x:40,y:8},{x:44,y:4},{x:48,y:6},{x:50,y:4},{x:52,y:3},{x:54,y:1},{x:56,y:4},{x:60,y:8}], // Array of notes to spawn in {x,y} format.
+		audio : notes_1, // Audio file to be played (Might need to delay depending).
+		delay : 2020, // Delay in frames until next pattern can spawn.
 		weight : 8, // Weight values below 1 will never spawn unless a difficulty modifier causes them to.
-		difficulty : -1 // Amount to adjust weight by each time difficulty increases.
-	},
-	{
-		notes : [{x:0,y:300},{x:256,y:500},{x:356,y:600}],
-		audio : testSound2,
-		delay : 200,
-		weight : 1,
-		difficulty : 1
+		difficulty : 0 // Amount to adjust weight by each time difficulty increases.
 	}
 ]
 
