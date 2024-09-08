@@ -26,7 +26,9 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"idk_no-hats.m4a","CopyToMask":-1,"filePath":"datafiles","name":"idk_no-hats.m4a","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -57,6 +59,7 @@
     {"id":{"name":"oVerticalBlockades","path":"objects/oVerticalBlockades/oVerticalBlockades.yy",},},
     {"id":{"name":"room_game","path":"rooms/room_game/room_game.yy",},},
     {"id":{"name":"room_main_menu","path":"rooms/room_main_menu/room_main_menu.yy",},},
+    {"id":{"name":"looping_bgm","path":"sounds/looping_bgm/looping_bgm.yy",},},
     {"id":{"name":"notes_1","path":"sounds/notes_1/notes_1.yy",},},
     {"id":{"name":"testSound1","path":"sounds/testSound1/testSound1.yy",},},
     {"id":{"name":"testSound2","path":"sounds/testSound2/testSound2.yy",},},

@@ -21,9 +21,17 @@ if (spawn_timer > spawn_delay)
 	
 	
 	audio_play_sound(_new_pattern.audio,1,false)
+	audio_play_sound(looping_bgm,1,false)
 	spawn_timer = 0;
 	spawn_delay = _new_pattern.delay
 }
+
+//bgm_loop_timer++;
+//if (bgm_loop_timer > bgm_loop_max)
+//{
+//	audio_play_sound(looping_bgm,1,false)
+//	bgm_loop_timer = 0;
+//}
 
 // Decrease the timer
 powerup_timer -= 1;

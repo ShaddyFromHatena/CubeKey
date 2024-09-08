@@ -20,6 +20,9 @@ score = 0;
 
 audio_stop_all();
 
+//bgm_loop_max = 2020;
+//bgm_loop_timer = bgm_loop_max;
+
 function lose()
 {
 	if not lost
@@ -51,8 +54,15 @@ patterns =
 	{
 		notes : [{x:0,y:8},{x:2,y:4},{x:4,y:6},{x:8,y:8},{x:10,y:6},{x:12,y:9},{x:14,y:8},{x:16,y:3},{x:18,y:4},{x:20,y:6},{x:22,y:8},{x:24,y:1},{x:26,y:3},{x:28,y:4},{x:30,y:6},{x:32,y:8},{x:34,y:4},{x:36,y:3},{x:40,y:8},{x:44,y:4},{x:48,y:6},{x:50,y:4},{x:52,y:3},{x:54,y:1},{x:56,y:4},{x:60,y:8}], // Array of notes to spawn in {x,y} format.
 		audio : notes_1, // Audio file to be played (Might need to delay depending).
-		delay : 2020, // Delay in frames until next pattern can spawn. 30 * length in seconds.
-		weight : 8, // Weight values below 1 will never spawn unless a difficulty modifier causes them to.
+		delay : 1930, // Delay in frames until next pattern can spawn. 30 * length in seconds.
+		weight : 0, // Weight values below 1 will never spawn unless a difficulty modifier causes them to.
+		difficulty : 0 // Amount to adjust weight by each time difficulty increases.
+	},
+	{
+		notes : [{x:0,y:8},{x:2,y:4},{x:4,y:6},{x:8,y:8},{x:10,y:6},{x:12,y:9},{x:14,y:8},{x:16,y:3},{x:18,y:4},{x:20,y:6},{x:22,y:8},{x:24,y:1},{x:26,y:3},{x:28,y:4},{x:30,y:6},{x:32,y:8},{x:34,y:4},{x:36,y:3},{x:40,y:8},{x:44,y:4},{x:48,y:6},{x:50,y:4},{x:52,y:3},{x:54,y:1},{x:56,y:4},{x:60,y:8}], // Array of notes to spawn in {x,y} format.
+		audio : notes_1, // Audio file to be played (Might need to delay depending).
+		delay : 1930, // Delay in frames until next pattern can spawn. 30 * length in seconds.
+		weight : 1, // Weight values below 1 will never spawn unless a difficulty modifier causes them to.
 		difficulty : 0 // Amount to adjust weight by each time difficulty increases.
 	}
 ]
