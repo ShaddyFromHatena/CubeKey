@@ -8,7 +8,9 @@ difficulty_timer = 0;
 spawn_delay = 120;
 spawn_timer = 0;
 
-score = 0;
+powerup_timer = room_speed * 30
+
+score = 0
 
 function lose()
 {

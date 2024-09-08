@@ -24,3 +24,5 @@ if (fire_timer > fire_delay)
 	fire_timer = 0;
 	instance_create_layer(x + fire_offset_x, y, "TrumpetDoots",oMusicNote)
 }
+
+if destroy == 1 {instance_destroy()}

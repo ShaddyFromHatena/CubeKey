@@ -7,3 +7,4 @@ pivot_y_max = 625;
 fire_delay = 128;
 fire_timer = 0;
 fire_offset_x = -64;
+destroy = 0;
