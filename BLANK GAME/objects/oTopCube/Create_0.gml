@@ -17,6 +17,8 @@ timer = 0;
 
 function die()
 {
+	// Play hit sound
+	audio_play_sound(hitHurt,1,false)
 	// Check for shield first
 	var _aura = instance_find(oTopShield_aura,0)
 	if (_aura)
@@ -50,13 +52,18 @@ function die()
 	}
 	else
 	{
-		// Change graphic to dead graphic.
+		instance_create_layer(x, y, "Instances", oTopDead);
+		with(instance_find(oBotCube,0))
+		{
+			instance_create_layer(x, y, "Instances", oBotDead);
+			instance_destroy();
+		}
 		// Play any necessary death sounds.
 		// Play any particle effects that need added to the death graphic.
-		x = -100
+		instance_destroy();
 		with(instance_find(gameManager,0))
 		{
-			lose()
+			lose();
 		}
 	}
 }

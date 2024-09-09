@@ -16,8 +16,8 @@ max_powerup_timer = 900;
 min_powerup_timer = 500;
 powerup_timer = random_range(min_powerup_timer,max_powerup_timer);
 
-spawn_y_min = 0;
-spawn_y_max = 770;
+spawn_y_min = 30;
+spawn_y_max = 740;
 skeleton_spawn_offset = 300;
 skeleton_timer = 0;
 skeleton_delay = 1500;
@@ -27,14 +27,23 @@ score = 0;
 
 audio_stop_all();
 
-//bgm_loop_max = 2020;
-//bgm_loop_timer = bgm_loop_max;
-
 function lose()
 {
 	if not lost
 	{
 		lost = true;
+		// Stop music
+		audio_stop_sound(notes_1);
+		audio_stop_sound(notes_2);
+		audio_stop_sound(notes_3);
+		audio_stop_sound(notes_4);
+		audio_stop_sound(notes_5);
+		audio_stop_sound(notes_6);
+		audio_stop_sound(notes_7);
+		audio_stop_sound(notes_8);
+		audio_stop_sound(notes_9);
+		audio_stop_sound(notes_10);
+		// Move UI onscreen
 		with(instance_find(oGameOver,0))
 		{
 			y -= 700
@@ -43,11 +52,16 @@ function lose()
 		{
 			y -= 700
 		}
+		// Destroy all notes and skeletons
+		for (i = instance_number(oKeyboardNote); i >= 0; i--)
+		{
+			with (instance_find(oKeyboardNote,i))
+			{
+				instance_destroy();
+			}
+		}
 	}
 	// Allow input for resetting the game state.
-	// Do any necessary music changes.
-	// Stop new note spawns.
-	// Cause all notes to fall off the chart or something-?
 }
 
 function gain_score(_added_score)

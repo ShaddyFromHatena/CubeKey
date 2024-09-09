@@ -11,6 +11,13 @@ if (image_index == 4 && sign(vsp) == sign(grv))
 	image_index = 5;
 }
 
+if (_key_jump && (place_meeting(x,y+sign(grv),partner_cube) || place_meeting(x,y+sign(grv),oKeyboardNote)) && !jump_scheduled)
+{
+	jump_scheduled = true;
+	jump_timer = 0;
+	image_index = 1;
+}
+
 if (jump_scheduled)
 {
 	image_index = 2;
@@ -19,17 +26,11 @@ if (jump_scheduled)
 	
 	if (jump_timer > jump_delay || !place_meeting(x,y+sign(grv),partner_cube))
 	{
+		audio_play_sound(jump,1,false)
 		vsp = jump_speed;
 		jump_scheduled = false;
 		image_index = 3;
 	}
-}
-
-if (_key_jump && (place_meeting(x,y+sign(grv),partner_cube) || place_meeting(x,y+sign(grv),oKeyboardNote)) && !jump_scheduled)
-{
-	jump_scheduled = true;
-	jump_timer = 0;
-	image_index = 1;
 }
 
 if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote) || place_meeting(x,y+vsp,oVerticalBlockades)))

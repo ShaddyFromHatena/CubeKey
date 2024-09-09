@@ -23,6 +23,7 @@ if (fire_timer > fire_delay)
 {
 	fire_timer = 0;
 	instance_create_layer(x + fire_offset_x, y, "TrumpetDoots",oMusicNote)
+	audio_play_sound(snd_trumpet,1,false)
 }
 
 if destroy == 1 {instance_destroy()}
