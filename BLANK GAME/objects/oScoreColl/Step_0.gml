@@ -10,3 +10,8 @@ if (place_meeting(x,y,oBotCube) || place_meeting(x,y,oTopCube))
 
 x += x_spd;
 y += y_spd;
+
+if (x < -200)
+{
+	instance_destroy();
+}

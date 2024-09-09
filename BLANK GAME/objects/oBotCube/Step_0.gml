@@ -78,7 +78,7 @@ if (powerup == "gun")
 	timer -= 1;
 	if (timer < 1)
 	{
-		if gun = true && bullets_fired < 46 
+		if gun = true && bullets_fired < 30
 		{
 			bullets_fired += 1;
 		} 
@@ -88,6 +88,7 @@ if (powerup == "gun")
 			powerup = "";
 			bullets_fired = 0;
 		}
+		audio_play_sound(laserShoot,1,false)
 		instance_create_layer(x,y,"Instances",oBullet);
 		timer = 60;
 		show_debug_message(timer)

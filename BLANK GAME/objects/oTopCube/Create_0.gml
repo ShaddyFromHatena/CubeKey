@@ -36,6 +36,7 @@ function die()
 				{
 					if (x < 1300)
 					{
+						instance_create_layer(x, y, "KeyboardNotes",oFallingKeyboard)
 						instance_destroy();
 					}
 				}

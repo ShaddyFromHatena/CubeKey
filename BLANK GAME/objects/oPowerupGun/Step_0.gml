@@ -10,3 +10,8 @@ if (place_meeting(x, y, oBotCube) or place_meeting(x, y, oTopCube))
 
 
 x += hspd
+
+if (x < -200)
+{
+	instance_destroy();
+}

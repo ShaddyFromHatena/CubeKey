@@ -12,8 +12,8 @@ spawn_timer = 0;
 max_score_timer = 200;
 score_timer = random_range(0,max_score_timer);
 
-max_powerup_timer = 900;
-min_powerup_timer = 500;
+max_powerup_timer = 550;
+min_powerup_timer = 350;
 powerup_timer = random_range(min_powerup_timer,max_powerup_timer);
 
 spawn_y_min = 30;
@@ -23,7 +23,7 @@ skeleton_timer = 0;
 skeleton_delay = 1500;
 
 lost = false;
-score = 0;
+total_score = 0;
 
 audio_stop_all();
 
@@ -57,6 +57,7 @@ function lose()
 		{
 			with (instance_find(oKeyboardNote,i))
 			{
+				instance_create_layer(x, y, "KeyboardNotes",oFallingKeyboard)
 				instance_destroy();
 			}
 		}
@@ -66,7 +67,7 @@ function lose()
 
 function gain_score(_added_score)
 {
-	score += _added_score
+	total_score += _added_score
 }
 
 // List of Patterns:

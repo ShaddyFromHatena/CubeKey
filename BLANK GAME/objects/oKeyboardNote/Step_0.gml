@@ -15,3 +15,8 @@ if (place_meeting(x,y,oTopCube))
 		die()
 	}
 }
+
+if (x < -200)
+{
+	instance_destroy();
+}
