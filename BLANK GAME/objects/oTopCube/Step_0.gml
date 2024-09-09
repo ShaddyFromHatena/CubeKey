@@ -2,14 +2,26 @@ var _key_jump = keyboard_check(vk_down) || keyboard_check(ord("S"))
 
 vsp += grv;
 
+if (image_index == 3)
+{
+	image_index = 4;
+}
+if (image_index == 4 && sign(vsp) == sign(grv))
+{
+	image_index = 5;
+}
+
 if (jump_scheduled)
 {
+	image_index = 2;
+	
 	jump_timer++
 	
 	if (jump_timer > jump_delay || !place_meeting(x,y+sign(grv),partner_cube))
 	{
 		vsp = jump_speed;
 		jump_scheduled = false;
+		image_index = 3;
 	}
 }
 
@@ -17,6 +29,7 @@ if (_key_jump && (place_meeting(x,y+sign(grv),partner_cube) || place_meeting(x,y
 {
 	jump_scheduled = true;
 	jump_timer = 0;
+	image_index = 1;
 }
 
 if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote) || place_meeting(x,y+vsp,oVerticalBlockades)))
@@ -26,15 +39,39 @@ if ((place_meeting(x,y+vsp,partner_cube) || place_meeting(x,y+vsp,oKeyboardNote)
 		y = y + sign(vsp);
 	}
 	vsp = 0;
+	if (!jump_scheduled)
+	{
+		image_index = 0;
+	}
 }
 
 y += vsp;
 
-if powerup = "shield" {
-	instance_create_layer(x, y, "Instances", oTopShield_aura);
-	powerup = ""
+if (magnet_timer > 0)
+{
+	magnet_timer--;
+	for (i = 0; i < instance_number(oScoreColl); i++)
+	{
+		var _score_coll = instance_find(oScoreColl,i);
+		var _dist = distance_to_object(_score_coll)
+		if (_dist < 500)
+		{
+			// get direction
+			var _x_dir = x - _score_coll.x;
+			var _y_dir = y - _score_coll.y;
+			// normalize direction
+			var _len = sqrt(sqr(_x_dir) + sqr(_y_dir));
+			_x_dir /= _len;
+			_y_dir /= _len;
+			// multiply by speed we want it to go
+			_x_dir *= 8;
+			_y_dir *= 8;
+			// set to normalized direction
+			_score_coll.x_spd = _x_dir;
+			_score_coll.y_spd = _y_dir;
+		}
 	}
-
+}
 if (powerup == "gun")
 {
 	timer -= 1;
@@ -51,14 +88,7 @@ if (powerup == "gun")
 			bullets_fired = 0;
 		}
 		instance_create_layer(x,y,"Instances",oBullet);
-		timer = 32;
+		timer = 60;
 		show_debug_message(timer)
 	}
-}
-
-if (powerup = "magnet")
-{
-	instance_create_layer(x, y, "Instances", oBotMagnet_aura);
-	instance_create_layer(x, y, "Instances", oTopMagnet_aura);
-	powerup = "";
 }

@@ -66,3 +66,12 @@ if (powerup_timer <= 0) {
     // Spawn the chosen object at a random position
     instance_create_layer(spawn_x, random_range(spawn_y_min, spawn_y_max), "Instances", _obj_to_spawn);
 }
+
+// Score
+score_timer--;
+
+if (score_timer <= 0)
+{
+	score_timer = random_range(0,max_score_timer);
+	instance_create_layer(spawn_x, random_range(spawn_y_min, spawn_y_max), "Instances", oScoreColl);
+}

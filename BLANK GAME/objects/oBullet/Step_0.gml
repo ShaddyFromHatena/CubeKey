@@ -1,4 +1,4 @@
-x += 6
+x += 12
 
 if place_meeting(x, y, oTrumpetSkeleton) {
 	

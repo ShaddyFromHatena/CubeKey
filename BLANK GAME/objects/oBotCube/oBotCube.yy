@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBotCube",
-    "path":"sprites/sBotCube/sBotCube.yy",
+    "name":"sTopCube",
+    "path":"sprites/sTopCube/sTopCube.yy",
   },
   "spriteMaskId":null,
   "visible":true,

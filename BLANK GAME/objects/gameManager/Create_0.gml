@@ -9,6 +9,9 @@ difficulty_timer = 0;
 spawn_delay = 120;
 spawn_timer = 0;
 
+max_score_timer = 200;
+score_timer = random_range(0,max_score_timer);
+
 max_powerup_timer = 900;
 min_powerup_timer = 500;
 powerup_timer = random_range(min_powerup_timer,max_powerup_timer);
@@ -17,7 +20,7 @@ spawn_y_min = 0;
 spawn_y_max = 770;
 skeleton_spawn_offset = 300;
 skeleton_timer = 0;
-skeleton_delay = 3000;
+skeleton_delay = 1500;
 
 lost = false;
 score = 0;

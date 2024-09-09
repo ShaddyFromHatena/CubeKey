@@ -6,3 +6,6 @@ if (place_meeting(x,y,oBotCube) || place_meeting(x,y,oTopCube))
 		gain_score(1)
 	}
 }
+
+x += x_spd;
+y += y_spd;
