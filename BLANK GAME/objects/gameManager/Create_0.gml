@@ -59,11 +59,18 @@ patterns =
 		difficulty : 0 // Amount to adjust weight by each time difficulty increases.
 	},
 	{
-		notes : [{x:0,y:8},{x:2,y:4},{x:4,y:6},{x:8,y:8},{x:10,y:6},{x:12,y:9},{x:14,y:8},{x:16,y:3},{x:18,y:4},{x:20,y:6},{x:22,y:8},{x:24,y:1},{x:26,y:3},{x:28,y:4},{x:30,y:6},{x:32,y:8},{x:34,y:4},{x:36,y:3},{x:40,y:8},{x:44,y:4},{x:48,y:6},{x:50,y:4},{x:52,y:3},{x:54,y:1},{x:56,y:4},{x:60,y:8}], // Array of notes to spawn in {x,y} format.
-		audio : notes_1, // Audio file to be played (Might need to delay depending).
-		delay : 1930, // Delay in frames until next pattern can spawn. 30 * length in seconds.
-		weight : 1, // Weight values below 1 will never spawn unless a difficulty modifier causes them to.
-		difficulty : 0 // Amount to adjust weight by each time difficulty increases.
+		notes : [{x:0,y:8},{x:2,y:11},{x:3,y:4},{x:4,y:6},{x:6,y:4},{x:7,y:1},{x:8,y:8},{x:11,y:6},{x:12,y:8},{x:13,y:9},{x:14,y:6},{x:15,y:4},{x:16,y:3},{x:17,y:4},{x:19,y:6},{x:20,y:8},{x:22,y:9},{x:24,y:1},{x:25,y:3},{x:26,y:4},{x:27,y:6},{x:29,y:4},{x:30,y:9},{x:31,y:8},{x:32,y:6},{x:34,y:4},{x:35,y:3},{x:37,y:0},{x:38,y:1},{x:40,y:4},{x:44,y:1},{x:46,y:8},{x:48,y:6},{x:49,y:4},{x:51,y:3},{x:52,y:4},{x:53,y:3},{x:55,y:1},{x:56,y:4},{x:58,y:8},{x:61,y:6},{x:62,y:4}],
+		audio : notes_2,
+		delay : 1930,
+		weight : 0,
+		difficulty : 0
+	},
+	{
+		notes : [{x:0,y:8},{x:2,y:4},{x:4,y:6},{x:5,y:4},{x:7,y:6},{x:8,y:8},{x:10,y:6},{x:11,y:8},{x:12,y:9},{x:13,y:8},{x:14,y:6},{x:15,y:4},{x:16,y:3},{x:17,y:1},{x:18,y:4},{x:19,y:3},{x:20,y:6},{x:21,y:4},{x:22,y:8},{x:23,y:6},{x:24,y:9},{x:25,y:8},{x:26,y:1},{x:27,y:3},{x:28,y:4},{x:30,y:8},{x:32,y:6},{x:33,y:4},{x:34,y:3},{x:35,y:1},{x:37,y:4},{x:40,y:8},{x:41,y:6},{x:42,y:4},{x:43,y:1},{x:45,y:4},{x:48,y:6},{x:49,y:5},{x:50,y:4},{x:51,y:3},{x:52,y:2},{x:53,y:1},{x:54,y:0},{x:55,y:1},{x:57,y:4},{x:59,y:8}],
+		audio : notes_3,
+		delay : 1930,
+		weight : 1,
+		difficulty : 0
 	}
 ]
 
