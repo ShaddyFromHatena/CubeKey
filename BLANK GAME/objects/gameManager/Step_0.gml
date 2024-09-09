@@ -26,6 +26,13 @@ if (spawn_timer > spawn_delay)
 	spawn_delay = _new_pattern.delay
 }
 
+skeleton_timer++;
+if (skeleton_timer > skeleton_delay)
+{
+	skeleton_timer = 0;
+	instance_create_layer(spawn_x + skeleton_spawn_offset, spawn_y + random_range(spawn_y_min,spawn_y_max), "TrumpetDoots",oTrumpetSkeleton)
+}
+
 //bgm_loop_timer++;
 //if (bgm_loop_timer > bgm_loop_max)
 //{
